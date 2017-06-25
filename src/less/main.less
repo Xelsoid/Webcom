@@ -388,7 +388,7 @@ header {
 .portfolio {
 	background: url('../images/content_bg.jpg') #0c1927 center bottom no-repeat;
 	background-size: cover;
-	padding: 60px 0px 40px 0px;
+	padding: 60px 0px 30px 0px;
 	border-bottom: solid #0c1927 2px;
 
 	.portfolio-header {
@@ -476,5 +476,68 @@ header {
 		border-bottom: solid @darkOrange 1px;
 		border-left: solid @darkOrange 1px;
 		transform: rotate(-45deg);
+	}
+}
+
+// advantages
+.advatages {
+	padding: 52px 0px 30px 0px;
+	border-bottom: solid #0c1927 2px;
+
+	.advatages-header {
+		margin: auto;
+
+		h2 {
+			color: @darkNavy;
+			font-size: 48px;
+			line-height: 0.7em;
+			letter-spacing: 0.2em;
+			margin-bottom: 0.5em;
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 2em;
+			letter-spacing: 0em;
+			color: #8198a0;
+			max-width:820px;
+			margin: 0.5em auto 2.7em auto;
+		}
+	}
+
+	.advatages-list {
+
+		.row {
+			max-width: 1380px;
+			margin: auto;
+			margin-bottom: 1em;
+		}
+
+		.point-wrapper {
+			margin-bottom: 50px;
+		}
+
+		.point {
+
+			i {
+				font-size: 46px;
+				color: @darkOrange;
+			}
+
+			h4 {
+				font-size: 16px;
+				color: @darkNavy;
+				margin-top: 20px;
+				letter-spacing: 0.1em;
+			}
+
+			p {
+				font-size: 16px;
+				line-height: 30px;
+				color: #8198a0;
+				margin-top: 10px;
+				letter-spacing: 0.1em;
+			}
+		}
 	}
 }

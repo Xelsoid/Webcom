@@ -11,7 +11,7 @@ module.exports = function(paths) {
 					// , "eslint-loader"
 				},
 				{
-					test: /\.(jpg|png|svg)$/,
+					test: /\.(jpg|png|svg|gif)$/,
 					loader: 'file-loader',
 					exclude: /fonts/,
 					options: {

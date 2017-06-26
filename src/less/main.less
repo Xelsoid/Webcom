@@ -384,33 +384,45 @@ header {
 	}
 }
 
+// common CSS
+.section-header {
+	margin: auto;
+
+	h2 {
+		color: @darkNavy;
+		font-size: 48px;
+		line-height: 0.7em;
+		letter-spacing: 0.2em;
+		margin-bottom: 0.5em;
+	}
+
+	p {
+		font-size: 18px;
+		line-height: 2em;
+		letter-spacing: 0em;
+		color: #8198a0;
+		max-width:820px;
+		margin: 0.5em auto 2.7em auto;
+	}
+}
+.zigzag {
+	.chevron-down {
+		display: inline-block;
+		width:8px;
+		height:8px;
+		margin:1px;
+		border-bottom: solid @darkOrange 1px;
+		border-left: solid @darkOrange 1px;
+		transform: rotate(-45deg);
+	}
+}
+
 // our works 
 .portfolio {
 	background: url('../images/content_bg.jpg') #0c1927 center bottom no-repeat;
 	background-size: cover;
 	padding: 60px 0px 30px 0px;
 	border-bottom: solid #0c1927 2px;
-
-	.portfolio-header {
-		margin: auto;
-
-		h2 {
-			color: @darkNavy;
-			font-size: 48px;
-			line-height: 0.7em;
-			letter-spacing: 0.2em;
-			margin-bottom: 0.5em;
-		}
-
-		p {
-			font-size: 18px;
-			line-height: 2em;
-			letter-spacing: 0em;
-			color: #8198a0;
-			max-width:820px;
-			margin: 0.5em auto 2.7em auto;
-		}
-	}
 
 	.row {
 		max-width: 1460px;
@@ -466,44 +478,9 @@ header {
 	}
 }
 
-
-.zigzag {
-	.chevron-down {
-		display: inline-block;
-		width:8px;
-		height:8px;
-		margin:1px;
-		border-bottom: solid @darkOrange 1px;
-		border-left: solid @darkOrange 1px;
-		transform: rotate(-45deg);
-	}
-}
-
 // advantages
 .advatages {
 	padding: 52px 0px 30px 0px;
-	border-bottom: solid #0c1927 2px;
-
-	.advatages-header {
-		margin: auto;
-
-		h2 {
-			color: @darkNavy;
-			font-size: 48px;
-			line-height: 0.7em;
-			letter-spacing: 0.2em;
-			margin-bottom: 0.5em;
-		}
-
-		p {
-			font-size: 18px;
-			line-height: 2em;
-			letter-spacing: 0em;
-			color: #8198a0;
-			max-width:820px;
-			margin: 0.5em auto 2.7em auto;
-		}
-	}
 
 	.advatages-list {
 
@@ -538,6 +515,122 @@ header {
 				margin-top: 10px;
 				letter-spacing: 0.1em;
 			}
+		}
+	}
+}
+
+// contacts, feedback form
+.contacts {
+	padding: 34px 0px 30px 0px;
+
+	.row {
+		max-width: 980px;
+		margin: auto;
+		margin-bottom: 1em;		
+	}
+
+	.address-group {
+		margin-bottom: 24px;
+
+		h5 {
+			font-size: 24px;
+			letter-spacing: 0.04em;
+			color: @darkOrange;
+			margin-bottom: 8px;
+		}
+
+		span, a {
+			color:#999999;
+			font-size: 18px;
+			line-height: 24px;
+			text-decoration: none;
+		}
+
+		a:hover, a:focus {
+			color:black;
+		}
+	}
+
+	form {
+		padding-left: 10px;
+	}
+
+	.form-group {
+		margin-bottom: 24px;
+		
+		label {
+			font-size: 24px;
+			line-height: 24px;
+			font-weight: bold;
+			color: @darkNavy;
+			margin-bottom: 12px;
+		}
+
+		input, textarea {
+			border: none;
+			box-shadow: none;
+			padding: 0px;
+			color: @darkNavy;
+
+			&::placeholder {
+				font-size: 18px;
+				line-height: 24px;
+				color: #c0c0c0;
+				font-style: italic;
+			}
+		}
+		
+		input {
+			border-bottom: solid #e7e7e7 1px;
+			font-size: 18px;
+			height: 20px;
+		}
+
+		input[type="file"] {
+			display: none;
+		}
+
+		textarea {
+			display: block;
+			resize: none;
+			overflow: hidden;
+			background: url('../images/lines.png') repeat-y;
+
+			&::placeholder {
+			}
+		}
+
+		.image-loader {
+			margin-top: -8px;
+			
+			i {
+				padding-top:18px;
+				width: 50px;
+				height: 60px;
+				background-color: @darkOrange;
+				border-radius: 10px;
+				color: #fff;
+				cursor: pointer;
+			}
+			span {
+				padding-left: 12px;
+			}
+			
+		}
+
+		.capcha-wrapper {
+			display: inline-block;
+			width: 59%;
+			padding-right: 20px;
+		}
+
+		input[type="submit"] {
+			display: inline-block;
+			width: 40%;
+			height: 60px;
+			background-color: @darkOrange;
+			border-radius: 10px;
+			color: #fff;
 		}
 	}
 }

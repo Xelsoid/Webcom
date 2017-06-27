@@ -1,0 +1,60 @@
+// our works 
+.portfolio {
+	background: url('../../images/content_bg.jpg') #0c1927 center bottom no-repeat;
+	background-size: cover;
+	padding: 52px 0px 26px 0px;
+	border-bottom: solid #0c1927 2px;
+
+	.row {
+		max-width: 1460px;
+		margin: auto;
+		margin-bottom: 1em;
+	}
+
+	.work-wrapper {
+		margin-bottom: 15px;
+	}
+	
+	.work {
+		position: relative;
+		width:100%;
+		display:block;
+
+		&:hover .work-description{
+			display: block;
+		}
+
+		&:focus .work-description{
+			display: block;
+		}
+
+		img {
+			width:100%;
+		}
+	}
+
+	.work-description {
+		display:none;
+		background-color: #d4d7d8;
+		box-sizing: border-box;
+		position: absolute;
+		bottom: 0;
+		left:0;
+		width:100%;
+		padding: 4px 10px 4px 60px;
+
+		h4 {
+			font-size: 18px;
+			line-height: 2em;
+			letter-spacing: 0.1em;
+			color: @darkNavy;
+		}
+
+		p {
+			font-size: 16px;
+			line-height: 2em;
+			letter-spacing: 0.05em;
+			color: #7b7b7b;
+		}
+	}
+}

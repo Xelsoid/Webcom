@@ -5,4 +5,4 @@ import 'font-awesome/css/font-awesome.css';
 
 
 import './css/reset.css';
-import './less/main.less';
+import './less/common.less';

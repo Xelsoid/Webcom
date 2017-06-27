@@ -1,0 +1,157 @@
+// contacts, feedback form
+.contacts {
+	padding: 24px 0px 30px 0px;
+	position: relative;
+
+	.row {
+		max-width: 980px;
+		margin: auto;
+	}
+
+	.address-group {
+		margin-bottom: 24px;
+
+		h5 {
+			font-size: 24px;
+			letter-spacing: 0.04em;
+			color: @darkOrange;
+			margin-bottom: 8px;
+		}
+
+		span, a {
+			color:#999999;
+			font-size: 18px;
+			line-height: 24px;
+			text-decoration: none;
+		}
+
+		a:hover, a:focus {
+			color:black;
+		}
+	}
+
+	form {
+		padding-left: 10px;
+	}
+
+	.form-group {
+		margin-bottom: 24px;
+		
+		label {
+			font-size: 24px;
+			line-height: 24px;
+			font-weight: bold;
+			color: @darkNavy;
+			margin-bottom: 12px;
+		}
+
+		input, textarea {
+			border: none;
+			box-shadow: none;
+			font-size: 18px;
+			padding: 0px;
+			color: @darkNavy;
+
+			&::placeholder {
+				font-size: 18px;
+				line-height: 24px;
+				color: #c0c0c0;
+				font-style: italic;
+			}
+		}
+		
+		input {
+			border-bottom: solid #e7e7e7 1px;
+			height: 20px;
+		}
+
+		textarea {
+			display: block;
+			resize: none;
+			overflow: hidden;
+			// background-images: url('../../images/lines.png') repeat-y;
+			background-size: cover;
+			line-height: 20px;
+			background-image: linear-gradient(to bottom,
+				transparent, transparent 19px,
+				#e5e5e5 20px,  #e5e5e5 20px,
+				transparent 21px, transparent 39px,
+				#e5e5e5 40px, #e5e5e5 40px,
+				transparent 41px, transparent 59px,
+				#e5e5e5 60px, #e5e5e5 60px,
+				transparent 61px, transparent 79px,
+				#e5e5e5 80px, #e5e5e5 80px,
+				transparent 81px, transparent 99px,
+				#e5e5e5 100px, #e5e5e5 100px  );
+		}
+
+		input[type="file"] {
+			display: none;
+		}
+
+		.image-loader {
+			
+			i {
+				padding-top:18px;
+				width: 50px;
+				height: 60px;
+				background-color: @darkOrange;
+				border-radius: 10px;
+				color: #fff;
+				cursor: pointer;
+
+				&:hover, :focus {
+					outline: 0;
+					filter: brightness(0.8);
+					transform: scale(1.05);
+				}
+			}
+			span {
+				padding-left: 12px;
+			}
+			
+		}
+	}
+
+	.feedback-field {
+		margin-bottom: 20px;
+	}
+
+	.upload-field {
+		margin-bottom: 12px;
+	}
+
+	.capcha-field {
+		vertical-align: bottom;
+
+		.capcha-wrapper {
+			box-sizing: border-box;
+			vertical-align: bottom;
+			display: inline-block;
+			width: 59%;
+			padding-right: 20px;
+
+			img {
+				margin-top: 32px;
+			}
+		}
+
+		input[type="submit"] {
+			box-sizing: border-box;
+			width: 40%;
+			height: 60px;
+			background-color: @darkOrange;
+			border-radius: 10px;
+			color: #fff;
+			font-size: 18px;
+			line-height: 40px;
+			letter-spacing: 1.5px;
+
+			&:hover, :focus {
+				outline: 0;
+				filter: brightness(0.8);
+				transform: scale(1.05);
+			}
+		}
+	}
+}

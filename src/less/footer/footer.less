@@ -1,0 +1,133 @@
+footer{
+	position: relative;
+	background-color: #1e292f;
+	border-bottom: solid @darkOrange 2px;
+
+	.scroll-up {
+		position:absolute;
+		width: 60px;
+		height: 60px;
+		top:-66px;
+		right: 13.5%;
+		border: solid @darkOrange 3px;
+		border-radius: 10px;
+
+		i{
+			font-size: 36px;
+			line-height: 48px;
+			color: @darkOrange;
+		}
+
+		&:hover, :focus {
+			outline: 0;
+			filter: brightness(0.8);
+			transform: scale(1.05);
+		}
+	}
+
+	.footer-info-wrapper {
+		
+		min-height: 250px;
+		background: url('../../images/map_bg.png') 100% 100% no-repeat @darkNavy;
+		background-size: contain;
+	}
+
+	.footer-info {
+		margin: auto;
+		max-width: 1430px;
+	}
+
+// common
+	.header {
+		font-size: 16px;
+		letter-spacing: 1px;
+		color: #fff;
+		margin-bottom: 36px;
+	}
+
+	.description {
+		color: #fff;
+			font-size: 14px;
+			line-height: 18px;
+			letter-spacing: 0.8px;
+			margin-top: 14px;
+	}
+// logo 
+	.logo {
+		text-align: left;
+		margin-top: 58px;
+
+		.mobile({
+			text-align: center;
+		});
+
+		.mobile-sm({
+			text-align: center;
+		});
+
+		img {
+			margin-bottom: 12px;
+		}
+	}
+
+// social
+	.social {
+		margin-top: 58px;
+		text-align: center;
+	}
+
+	.social-icons {
+		padding-top: 18px;
+		
+		li {
+			display: inline-block;
+
+		}
+
+		a {
+			display: inline-block;
+			color: #fff;
+			text-decoration: none;
+			margin: 0px 10px;
+
+			&:hover, :focus {
+				color: @darkOrange;
+				tranform: color;
+				transition: 0.9s;
+			}
+		}
+
+		i {
+			font-size: 28px;
+		}
+	}
+
+// address
+	.address {
+		margin-top: 58px;
+		text-align: right;
+
+		.mobile({
+			text-align: center;
+		});
+
+		.mobile-sm({
+			text-align: center;
+		});
+	}
+
+
+
+
+
+	.footer-copyright {
+		min-height: 60px;
+		padding-top: 20px;
+
+		span {
+			color: #fff;
+			font-size: 14px;
+			letter-spacing: 2.5px;			
+		}
+	}
+}

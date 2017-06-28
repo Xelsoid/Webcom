@@ -5,392 +5,504 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" >
 	<title>Webcom</title>
-	<!-- <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"> -->
 </head>
 
 <body>
-	<header id="nav">
-		<div></div>
-	</header>
+<div class="modal-windows">
+	<div class="modal fade" id="modalRequest" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<form class="modal-content" action="#" name="modal_request">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title text-uppercase">Ваша заявка</h4>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label class="text-uppercase" for="username_modal">Ваше имя</label>
+						<input type="text" class="form-control" id="username_modal" placeholder="Иванов Иван">
+					</div>
 
-	<main>
-		<section id="carousel" class="carousel slide" data-ride="carousel">
-			<!-- Indicators -->
-			<ol class="carousel-indicators">
-				<li data-target="#carousel" data-slide-to="0" class="active"></li>
-				<li data-target="#carousel" data-slide-to="1"></li>
-				<li data-target="#carousel" data-slide-to="2"></li>
-				<li data-target="#carousel" data-slide-to="3"></li>
-				<li data-target="#carousel" data-slide-to="4"></li>
-			</ol>
+					<div class="form-group">
+						<label class="text-uppercase" for="email_modal">e-mail</label>
+						<input type="email" class="form-control" id="email_modal" placeholder="example@mysie.com">
+					</div>
+
+					<div class="form-group">
+						<label class="text-uppercase" for="number_modal">Тел. номер</label>
+						<input type="tel" class="form-control" id="number_modal" placeholder="Тел. номер">
+					</div>	
+					<input type="submit" class="btn btn-default text-uppercase" data-dismiss="modal" data-toggle="modal" data-target="#modalThanks"  value="Отправить">		
+				</div>
+			</form><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<div class="modal fade" id="modalThanks" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Заявка отправлена</h4>
+				</div>
+				<div class="modal-body">
+					Спасибо за вашу заявку, наши специалисты свяжуться с вами.
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default text-uppercase" data-dismiss="modal">Закрыть</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->		
+</div>
+
+<header id="headerNavigation">
+	<nav class="navbar navbar-default">
+		<div class="navbar-wrapper">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand optimize" href="#">
+					<img alt="picBrand" src="images/logo.png" >
+				</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav optimize" >
+					<li class="menu-item">
+						<a class="text-uppercase text-center" href="#main">
+							<div>Главная</div>
+						</a>
+					</li>
+					<li class="menu-item">
+						<a class="text-uppercase text-center" href="#portfolio">
+							<div>Портфолио</div>
+						</a>
+					</li>
+					<li class="menu-item">
+						<a class="text-uppercase text-center" href="#advatages">
+							<div>Преимущества</div>
+						</a>
+					</li>
+					<li class="menu-item">
+						<a class="text-uppercase text-center" href="#">
+							<div>Схема работы</div>
+						</a>
+					</li>
+					<li class="menu-item">
+						<a class="text-uppercase text-center" href="#contacts">
+							<div>Отзывы</div>
+						</a>
+					</li>
+					<li class="menu-item">
+						<a class="text-uppercase text-center" href="#contacts">
+							<div>Контакты</div>
+						</a>
+					</li>
+				</ul> 
+				<div class="pull-left aside-info optimize">
+					<address class="header-address optimize">
+						<a href="tel:+37529123-45-67">+375 (29) 123-45-67</a><br>
+						<a href="tel:+37533123-45-67">+375 (33) 123-45-67</a>
+					</address>
+					<div  class="make-order optimize">
+						<button class="text-uppercase text-center" data-toggle="modal" data-target="#modalRequest">Оформить заявку</button>
+					</div>
+					
+				</div> 
+				
+			</div>
+
 			
-			<a class="to-content text-center" href="#portfolio">
-				<i class="fa fa-chevron-down" aria-hidden="true"></i>
-			</a>
+		</div>
+	</nav>
+</header>
 
-			<!-- Wrapper for slides -->
-			<div class="carousel-inner" role="listbox">
-				<div class="item active">
-					<img src="./images/slider_bg.jpg" alt="">
-					<div class="carousel-caption">
-					    <h3 class="text-uppercase">Главный заголовок</h3>
-					    <table>
-					    	<tr>
-					    		<td class="line"><div></div></td>
-					    		<td class="square"><div></div></td>
-					    		<td class="line"><div></div></td>
-					    	</tr>
-					    </table>
-					    <p class="text-uppercase">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloremagna aliqua. </p>
-					    <button type="button" class="btn btn-primary btn-lg active text-uppercase">Оформить заявку</button>
-					</div>
-				</div>
-				<div class="item">
-					<img src="./images/slider_bg.jpg" alt="">
-					<div class="carousel-caption">
-					...
-					</div>
-				</div>
-				<div class="item">
-					<img src="./images/slider_bg.jpg" alt="">
-					<div class="carousel-caption">
-					...
-					</div>
-				</div>
-				<div class="item">
-					<img src="./images/slider_bg.jpg" alt="">
-					<div class="carousel-caption">
-					...
-					</div>
-				</div>
-				<div class="item">
-					<img src="./images/slider_bg.jpg" alt="">
-					<div class="carousel-caption">
-					...
-					</div>
-				</div>
-			</div>
-
-			<!-- Controls -->
-			<div class="left carousel-control" >
-				<span class="glyphicon glyphicon-menu-left" href="#carousel" role="button" data-slide="prev"  aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</div>
-			<div class="right carousel-control" >
-				<span class="glyphicon glyphicon-menu-right" href="#carousel" role="button" data-slide="next"  aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</div>
-		</section>
-
-		<section id="portfolio" class="portfolio">
-			<div class="section-header container text-center">
-				<h2 class="text-uppercase">Наша работа</h2>
-				<div class="zigzag"><!--
-					--><div class="chevron-down"></div><!--
-					--><div class="chevron-down"></div><!--
-					--><div class="chevron-down"></div><!--
-				--></div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium optio tempore earum placeat voluptate debitis libero nulla, consectetur delectus sapiente voluptatem iste ut, ipsa ratione!
-				</p>
-			</div>
-			<div class="work-examples container-fluid">
-				<div class="row">
-					<div class="work-wrapper col-xs-12 col-sm-6 col-md-4" >
-						<a class="work" href="#">
-							<img src="./images/photo-example.jpg" alt="our work">
-							<div class="work-description">
-								<h4 class="text-uppercase">Название работы</h4>
-								<div class="zigzag"><!--
-								--><div class="chevron-down"></div><!--
-								--><div class="chevron-down"></div><!--
-								--><div class="chevron-down"></div><!--
-							--></div>
-								<p class="text-uppercase">Описание работы</p>
-							</div>
-						</a>
-					</div>
-					<div class="work-wrapper col-xs-12 col-sm-6 col-md-4" >
-						<a class="work" href="#">
-							<img src="./images/photo-example.jpg" alt="our work">
-							<div class="work-description">
-								<h4 class="text-uppercase">Название работы</h4>
-								<div class="zigzag"><!--
-								--><div class="chevron-down"></div><!--
-								--><div class="chevron-down"></div><!--
-								--><div class="chevron-down"></div><!--
-							--></div>
-								<p class="text-uppercase">Описание работы</p>
-							</div>
-						</a>
-					</div>
-					<div class="work-wrapper col-xs-12 col-sm-6 col-md-4" >
-						<a class="work" href="#">
-							<img src="./images/photo-example.jpg" alt="our work">
-							<div class="work-description">
-								<h4 class="text-uppercase">Название работы</h4>
-								<div class="zigzag"><!--
-								--><div class="chevron-down"></div><!--
-								--><div class="chevron-down"></div><!--
-								--><div class="chevron-down"></div><!--
-							--></div>
-								<p class="text-uppercase">Описание работы</p>
-							</div>
-						</a>
-					</div>
-					<div class="work-wrapper col-xs-12 col-sm-6 col-md-4" >
-						<a class="work" href="#">
-							<img src="./images/photo-example.jpg" alt="our work">
-							<div class="work-description">
-								<h4 class="text-uppercase">Название работы</h4>
-								<div class="zigzag"><!--
-								--><div class="chevron-down"></div><!--
-								--><div class="chevron-down"></div><!--
-								--><div class="chevron-down"></div><!--
-							--></div>
-								<p class="text-uppercase">Описание работы</p>
-							</div>
-						</a>
-					</div>
-					<div class="work-wrapper col-xs-12 col-sm-6 col-md-4" >
-						<a class="work" href="#">
-							<img src="./images/photo-example.jpg" alt="our work">
-							<div class="work-description">
-								<h4 class="text-uppercase">Название работы</h4>
-								<div class="zigzag"><!--
-								--><div class="chevron-down"></div><!--
-								--><div class="chevron-down"></div><!--
-								--><div class="chevron-down"></div><!--
-							--></div>
-								<p class="text-uppercase">Описание работы</p>
-							</div>
-						</a>
-					</div>
-					<div class="work-wrapper col-xs-12 col-sm-6 col-md-4 " >
-						<a class="work" href="#">
-							<img src="./images/photo-example.jpg" alt="our work">
-							<div class="work-description">
-								<h4 class="text-uppercase">Название работы</h4>
-								<div class="zigzag"><!--
-								--><div class="chevron-down"></div><!--
-								--><div class="chevron-down"></div><!--
-								--><div class="chevron-down"></div><!--
-							--></div>
-								<p class="text-uppercase">Описание работы</p>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section id="advatages" class="advatages">
-			<div class="section-header container text-center">
-				<h2 class="text-uppercase">Почему мы</h2>
-				<div class="zigzag"><!--
-					--><div class="chevron-down"></div><!--
-					--><div class="chevron-down"></div><!--
-					--><div class="chevron-down"></div><!--
-				--></div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium optio tempore earum placeat voluptate debitis libero nulla, consectetur delectus sapiente voluptatem iste ut, ipsa ratione!
-				</p>
-			</div>
-			<div class="advatages-list container-fluid">
-				<div class="row text-center">
-					<div class="point-wrapper col-xs-6 col-sm-6 col-md-3" >
-						<div class="point">
-							<i class="fa fa-desktop" aria-hidden="true"></i>
-							<h4 class="text-uppercase">Преимущество 1</h4>
-							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
-						</div>
-					</div>
-					<div class="point-wrapper col-xs-6 col-sm-6 col-md-3" >
-						<div class="point">
-							<i class="fa fa-magic" aria-hidden="true"></i>
-							<h4 class="text-uppercase">Преимущество 2</h4>
-							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
-						</div>
-					</div>
-					<div class="point-wrapper col-xs-6 col-sm-6 col-md-3" >
-						<div class="point">
-							<i class="fa fa-rocket" aria-hidden="true"></i>
-							<h4 class="text-uppercase">Преимущество 3</h4>
-							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
-						</div>
-					</div>
-					<div class="point-wrapper col-xs-6 col-sm-6 col-md-3" >
-						<div class="point">
-							<i class="fa fa-globe" aria-hidden="true"></i>
-							<h4 class="text-uppercase">Преимущество 4</h4>
-							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
-						</div>
-					</div>
-					<div class="point-wrapper col-xs-6 col-sm-6 col-md-3" >
-						<div class="point">
-							<i class="fa fa-cog" aria-hidden="true"></i>
-							<h4 class="text-uppercase">Преимущество 5</h4>
-							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
-						</div>
-					</div>
-					<div class="point-wrapper col-xs-6 col-sm-6 col-md-3" >
-						<div class="point">
-							<i class="fa fa-th" aria-hidden="true"></i>
-							<h4 class="text-uppercase">Преимущество 6</h4>
-							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
-						</div>
-					</div>
-					<div class="point-wrapper col-xs-6 col-sm-6 col-md-3" >
-						<div class="point">
-							<i class="fa fa-wrench" aria-hidden="true"></i>
-							<h4 class="text-uppercase">Преимущество 7</h4>
-							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
-						</div>
-					</div>
-					<div class="point-wrapper col-xs-6 col-sm-6 col-md-3" >
-						<div class="point">
-							<i class="fa fa-sticky-note-o" aria-hidden="true"></i>
-							<h4 class="text-uppercase">Преимущество 8</h4>
-							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="contacts" class="contacts">
-			<div class="section-header container text-center">
-				<h2 class="text-uppercase">Оставьте отзыв</h2>
-				<div class="zigzag"><!--
-					--><div class="chevron-down"></div><!--
-					--><div class="chevron-down"></div><!--
-					--><div class="chevron-down"></div><!--
-				--></div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium optio tempore earum placeat voluptate debitis libero nulla, consectetur delectus sapiente voluptatem iste ut, ipsa ratione!
-				</p>
-			</div>
-			<div class="row">
-				<address class="col-xs-12 col-md-5">
-					<div class="address-group">
-						<h5 class="text-uppercase">Наш адрес</h5>
-						<span>г.Минск, ул. Скрыганова, 6А, 4 этаж</span>
-					</div>
-					<div class="address-group">
-						<h5 class="text-uppercase">Звоните</h5>
-						<a href="tel:+375291234567">+375 (29) 123-45-67</a>
-						<span>,</span>
-						<a href="tel:+375331234567">+375 (33) 123-45-67</a>
-					</div>
-					<div class="address-group">
-						<h5 class="text-uppercase">Пишите</h5>
-						<a href="mailto:nfo@promo-webcom.by">info@promo-webcom.by</a>
-					</div>
-				</address>
-				<form class="col-xs-12 col-md-7" action="" name="feedback_form">
-
-					<div class="form-group">
-						<label class="text-uppercase" for="username">Ваше имя</label>
-						<input type="text" class="form-control" id="username" placeholder="Иванов Иван">
-					</div>
-
-					<div class="form-group">
-						<label class="text-uppercase" for="email">e-mail</label>
-						<input type="email" class="form-control" id="email" placeholder="example@mysie.com">
-					</div>
-
-					<div class="form-group">
-						<label class="text-uppercase" for="position">Ваша должность</label>
-						<input type="text" class="form-control" id="position" placeholder="Должность">
-					</div>
-
-					<div class="form-group feedback-field">
-						<label class="text-uppercase" for="feedback">Отзыв</label>
-						<textarea class="form-control" name="feedback" id="feedback" rows="5" placeholder="Ваше сообщение"></textarea>
-					</div>
-
-					<div class="form-group upload-field">
-						<input type="file" id="uploadImage">
-						<label class="text-uppercase image-loader text-center" for="uploadImage">
-							<i class="fa fa-plus text-center" aria-hidden="true"></i>
-							<span class="text-uppercase">Фото</span>
-						</label>
-					</div>
-
-					<div class="form-group capcha-field">
-						<div class="capcha-wrapper">
-							<label class="text-uppercase" for="inputForCapcha">Введите код с картинки</label>
-							<input type="text" class="form-control" id="inputForCapcha">
-							<img id="capchaInFeedback" src="./images/capcha_example.png" alt="here should be capcha">
-						</div>
-							<input type="submit" class="btn btn-default text-uppercase" value="Отправить">
-						
-					</div>						
-				</form>
-
-			</div>
-			
-		</section>
-	</main>
-
-	<footer>
-		<a class="scroll-up text-center" href="#nav">
-			<i class="fa fa-arrow-up" aria-hidden="true"></i>
+<main id="main" id="main">
+	<section id="carousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#carousel" data-slide-to="0" class="active"></li>
+			<li data-target="#carousel" data-slide-to="1"></li>
+			<li data-target="#carousel" data-slide-to="2"></li>
+			<li data-target="#carousel" data-slide-to="3"></li>
+			<li data-target="#carousel" data-slide-to="4"></li>
+		</ol>
+		
+		<a class="to-content text-center" href="#portfolio">
+			<i class="fa fa-chevron-down" aria-hidden="true"></i>
 		</a>
 
-		<div class="footer-info-wrapper">
-			<div class="footer-info row">
-
-				<div class="col-xs-12 col-sm-4 logo">
-					<img src="./images/logo.png" alt="Webcom Media">
-					<div class="zigzag"><!--
-					--><div class="chevron-down"></div><!--
-					--><div class="chevron-down"></div><!--
-					--><div class="chevron-down"></div><!--
-				--></div>
-					<p class="description">Дисклеймер компании</p>
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<img src="./images/slider_bg.jpg" alt="">
+				<div class="carousel-caption">
+				    <h3 class="text-uppercase">Главный заголовок</h3>
+				    <table>
+				    	<tr>
+				    		<td class="line"><div></div></td>
+				    		<td class="square"><div></div></td>
+				    		<td class="line"><div></div></td>
+				    	</tr>
+				    </table>
+				    <p class="text-uppercase">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloremagna aliqua. </p>
+				    <button type="button" class="btn btn-primary btn-lg active text-uppercase" data-toggle="modal" data-target="#modalRequest">Оформить заявку</button>
 				</div>
-
-				<div class="col-xs-12 col-sm-4 social">
-					<h6 class="header text-uppercase">Мы в соцсетях</h6>
-					<div class="zigzag"><!--
-					--><div class="chevron-down"></div><!--
-					--><div class="chevron-down"></div><!--
-					--><div class="chevron-down"></div><!--
-				--></div>
-					<ul class="social-icons">
-						<li>
-							<a href="#">
-								<i class="fa fa-instagram" aria-hidden="true"></i>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="fa fa-twitter" aria-hidden="true"></i>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="fa fa-facebook" aria-hidden="true"></i>
-							</a>
-						</li>
-					</ul>
+			</div>
+			<div class="item">
+				<img src="./images/slider_bg.jpg" alt="">
+				<div class="carousel-caption">
+				...
 				</div>
-
-				<address class="col-xs-12 col-sm-4 address">
-					<h6 class="header text-uppercase">
-						Адрес
-					</h6>
-					<div class="zigzag"><!--
-					--><div class="chevron-down"></div><!--
-					--><div class="chevron-down"></div><!--
-					--><div class="chevron-down"></div><!--
-				--></div>
-					<p class="description">г.Минск, ул. Скрыганова, 6А,<br> 4 этаж</p>
-				</address>
-
+			</div>
+			<div class="item">
+				<img src="./images/slider_bg.jpg" alt="">
+				<div class="carousel-caption">
+				...
+				</div>
+			</div>
+			<div class="item">
+				<img src="./images/slider_bg.jpg" alt="">
+				<div class="carousel-caption">
+				...
+				</div>
+			</div>
+			<div class="item">
+				<img src="./images/slider_bg.jpg" alt="">
+				<div class="carousel-caption">
+				...
+				</div>
 			</div>
 		</div>
 
-		<div class="footer-copyright text-center">
-			<span class="text-uppercase">Copyrights 2015 &copy; Webcom Media</span>
+		<!-- Controls -->
+		<div class="left carousel-control" >
+			<span class="glyphicon glyphicon-menu-left" href="#carousel" role="button" data-slide="prev"  aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
 		</div>
-	</footer>
+		<div class="right carousel-control" >
+			<span class="glyphicon glyphicon-menu-right" href="#carousel" role="button" data-slide="next"  aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</div>
+	</section>
+
+	<section id="portfolio" class="portfolio">
+		<div class="section-header container text-center">
+			<h2 class="text-uppercase">Наша работа</h2>
+			<div class="zigzag"><!--
+				--><div class="chevron-down"></div><!--
+				--><div class="chevron-down"></div><!--
+				--><div class="chevron-down"></div><!--
+			--></div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium optio tempore earum placeat voluptate debitis libero nulla, consectetur delectus sapiente voluptatem iste ut, ipsa ratione!
+			</p>
+		</div>
+		<div class="work-examples container-fluid">
+			<div class="row">
+				<div class="work-wrapper col-xs-12 col-sm-6 col-md-4" >
+					<a class="work" href="#">
+						<img src="./images/photo-example.jpg" alt="our work">
+						<div class="work-description">
+							<h4 class="text-uppercase">Название работы</h4>
+							<div class="zigzag"><!--
+							--><div class="chevron-down"></div><!--
+							--><div class="chevron-down"></div><!--
+							--><div class="chevron-down"></div><!--
+						--></div>
+							<p class="text-uppercase">Описание работы</p>
+						</div>
+					</a>
+				</div>
+				<div class="work-wrapper col-xs-12 col-sm-6 col-md-4" >
+					<a class="work" href="#">
+						<img src="./images/photo-example.jpg" alt="our work">
+						<div class="work-description">
+							<h4 class="text-uppercase">Название работы</h4>
+							<div class="zigzag"><!--
+							--><div class="chevron-down"></div><!--
+							--><div class="chevron-down"></div><!--
+							--><div class="chevron-down"></div><!--
+						--></div>
+							<p class="text-uppercase">Описание работы</p>
+						</div>
+					</a>
+				</div>
+				<div class="work-wrapper col-xs-12 col-sm-6 col-md-4" >
+					<a class="work" href="#">
+						<img src="./images/photo-example.jpg" alt="our work">
+						<div class="work-description">
+							<h4 class="text-uppercase">Название работы</h4>
+							<div class="zigzag"><!--
+							--><div class="chevron-down"></div><!--
+							--><div class="chevron-down"></div><!--
+							--><div class="chevron-down"></div><!--
+						--></div>
+							<p class="text-uppercase">Описание работы</p>
+						</div>
+					</a>
+				</div>
+				<div class="work-wrapper col-xs-12 col-sm-6 col-md-4" >
+					<a class="work" href="#">
+						<img src="./images/photo-example.jpg" alt="our work">
+						<div class="work-description">
+							<h4 class="text-uppercase">Название работы</h4>
+							<div class="zigzag"><!--
+							--><div class="chevron-down"></div><!--
+							--><div class="chevron-down"></div><!--
+							--><div class="chevron-down"></div><!--
+						--></div>
+							<p class="text-uppercase">Описание работы</p>
+						</div>
+					</a>
+				</div>
+				<div class="work-wrapper col-xs-12 col-sm-6 col-md-4" >
+					<a class="work" href="#">
+						<img src="./images/photo-example.jpg" alt="our work">
+						<div class="work-description">
+							<h4 class="text-uppercase">Название работы</h4>
+							<div class="zigzag"><!--
+							--><div class="chevron-down"></div><!--
+							--><div class="chevron-down"></div><!--
+							--><div class="chevron-down"></div><!--
+						--></div>
+							<p class="text-uppercase">Описание работы</p>
+						</div>
+					</a>
+				</div>
+				<div class="work-wrapper col-xs-12 col-sm-6 col-md-4 " >
+					<a class="work" href="#">
+						<img src="./images/photo-example.jpg" alt="our work">
+						<div class="work-description">
+							<h4 class="text-uppercase">Название работы</h4>
+							<div class="zigzag"><!--
+							--><div class="chevron-down"></div><!--
+							--><div class="chevron-down"></div><!--
+							--><div class="chevron-down"></div><!--
+						--></div>
+							<p class="text-uppercase">Описание работы</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="advatages" class="advatages">
+		<div class="section-header container text-center">
+			<h2 class="text-uppercase">Почему мы</h2>
+			<div class="zigzag"><!--
+				--><div class="chevron-down"></div><!--
+				--><div class="chevron-down"></div><!--
+				--><div class="chevron-down"></div><!--
+			--></div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium optio tempore earum placeat voluptate debitis libero nulla, consectetur delectus sapiente voluptatem iste ut, ipsa ratione!
+			</p>
+		</div>
+		<div class="advatages-list container-fluid">
+			<div class="row text-center">
+				<div class="point-wrapper col-xs-6 col-sm-6 col-md-3" >
+					<div class="point">
+						<i class="fa fa-desktop" aria-hidden="true"></i>
+						<h4 class="text-uppercase">Преимущество 1</h4>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
+					</div>
+				</div>
+				<div class="point-wrapper col-xs-6 col-sm-6 col-md-3" >
+					<div class="point">
+						<i class="fa fa-magic" aria-hidden="true"></i>
+						<h4 class="text-uppercase">Преимущество 2</h4>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
+					</div>
+				</div>
+				<div class="point-wrapper col-xs-6 col-sm-6 col-md-3" >
+					<div class="point">
+						<i class="fa fa-rocket" aria-hidden="true"></i>
+						<h4 class="text-uppercase">Преимущество 3</h4>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
+					</div>
+				</div>
+				<div class="point-wrapper col-xs-6 col-sm-6 col-md-3" >
+					<div class="point">
+						<i class="fa fa-globe" aria-hidden="true"></i>
+						<h4 class="text-uppercase">Преимущество 4</h4>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
+					</div>
+				</div>
+				<div class="point-wrapper col-xs-6 col-sm-6 col-md-3" >
+					<div class="point">
+						<i class="fa fa-cog" aria-hidden="true"></i>
+						<h4 class="text-uppercase">Преимущество 5</h4>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
+					</div>
+				</div>
+				<div class="point-wrapper col-xs-6 col-sm-6 col-md-3" >
+					<div class="point">
+						<i class="fa fa-th" aria-hidden="true"></i>
+						<h4 class="text-uppercase">Преимущество 6</h4>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
+					</div>
+				</div>
+				<div class="point-wrapper col-xs-6 col-sm-6 col-md-3" >
+					<div class="point">
+						<i class="fa fa-wrench" aria-hidden="true"></i>
+						<h4 class="text-uppercase">Преимущество 7</h4>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
+					</div>
+				</div>
+				<div class="point-wrapper col-xs-6 col-sm-6 col-md-3" >
+					<div class="point">
+						<i class="fa fa-sticky-note-o" aria-hidden="true"></i>
+						<h4 class="text-uppercase">Преимущество 8</h4>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="contacts" class="contacts">
+		<div class="section-header container text-center">
+			<h2 class="text-uppercase">Оставьте отзыв</h2>
+			<div class="zigzag"><!--
+				--><div class="chevron-down"></div><!--
+				--><div class="chevron-down"></div><!--
+				--><div class="chevron-down"></div><!--
+			--></div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium optio tempore earum placeat voluptate debitis libero nulla, consectetur delectus sapiente voluptatem iste ut, ipsa ratione!
+			</p>
+		</div>
+		<div class="row">
+			<address class="col-sm-12 col-md-5">
+				<div class="address-group">
+					<h5 class="text-uppercase">Наш адрес</h5>
+					<span>г.Минск, ул. Скрыганова, 6А, 4 этаж</span>
+				</div>
+				<div class="address-group">
+					<h5 class="text-uppercase">Звоните</h5>
+					<a href="tel:+375291234567">+375 (29) 123-45-67</a>
+					<span>,</span>
+					<a href="tel:+375331234567">+375 (33) 123-45-67</a>
+				</div>
+				<div class="address-group">
+					<h5 class="text-uppercase">Пишите</h5>
+					<a href="mailto:nfo@promo-webcom.by">info@promo-webcom.by</a>
+				</div>
+			</address>
+			<form class="col-xs-12 col-md-7" action="" name="feedback_form">
+
+				<div class="form-group">
+					<label class="text-uppercase" for="username">Ваше имя</label>
+					<input type="text" class="form-control" id="username" placeholder="Иванов Иван">
+				</div>
+
+				<div class="form-group">
+					<label class="text-uppercase" for="email">e-mail</label>
+					<input type="email" class="form-control" id="email" placeholder="example@mysie.com">
+				</div>
+
+				<div class="form-group">
+					<label class="text-uppercase" for="position">Ваша должность</label>
+					<input type="text" class="form-control" id="position" placeholder="Должность">
+				</div>
+
+				<div class="form-group feedback-field">
+					<label class="text-uppercase" for="feedback">Отзыв</label>
+					<textarea class="form-control" name="feedback" id="feedback" rows="5" placeholder="Ваше сообщение"></textarea>
+				</div>
+
+				<div class="form-group upload-field">
+					<input type="file" id="uploadImage">
+					<label class="text-uppercase image-loader text-center" for="uploadImage">
+						<i class="fa fa-plus text-center" aria-hidden="true"></i>
+						<span class="text-uppercase">Фото</span>
+					</label>
+				</div>
+
+				<div class="form-group capcha-field">
+					<div class="capcha-wrapper">
+						<label class="text-uppercase" for="inputForCapcha">Введите код с картинки</label>
+						<input type="text" class="form-control" id="inputForCapcha">
+						<img id="capchaInFeedback" src="./images/capcha_example.png" alt="here should be capcha">
+					</div>
+						<input type="submit" class="btn btn-default text-uppercase" value="Отправить">
+					
+				</div>						
+			</form>
+
+		</div>
+		
+	</section>
+</main>
+
+<footer>
+	<a class="scroll-up text-center" href="#headerNavigation">
+		<i class="fa fa-arrow-up" aria-hidden="true"></i>
+	</a>
+
+	<div class="footer-info-wrapper">
+		<div class="footer-info row">
+
+			<div class="col-xs-12 col-sm-4 logo">
+				<img src="./images/logo.png" alt="Webcom Media">
+				<div class="zigzag"><!--
+				--><div class="chevron-down"></div><!--
+				--><div class="chevron-down"></div><!--
+				--><div class="chevron-down"></div><!--
+			--></div>
+				<p class="description">Дисклеймер компании</p>
+			</div>
+
+			<div class="col-xs-12 col-sm-4 social">
+				<h6 class="header text-uppercase">Мы в соцсетях</h6>
+				<div class="zigzag"><!--
+				--><div class="chevron-down"></div><!--
+				--><div class="chevron-down"></div><!--
+				--><div class="chevron-down"></div><!--
+			--></div>
+				<ul class="social-icons">
+					<li>
+						<a href="#">
+							<i class="fa fa-instagram" aria-hidden="true"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa fa-facebook" aria-hidden="true"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<address class="col-xs-12 col-sm-4 address">
+				<h6 class="header text-uppercase">
+					Адрес
+				</h6>
+				<div class="zigzag"><!--
+				--><div class="chevron-down"></div><!--
+				--><div class="chevron-down"></div><!--
+				--><div class="chevron-down"></div><!--
+			--></div>
+				<p class="description">г.Минск, ул. Скрыганова, 6А,<br> 4 этаж</p>
+			</address>
+
+		</div>
+	</div>
+
+	<div class="footer-copyright text-center">
+		<span class="text-uppercase">Copyrights 2015 &copy; Webcom Media</span>
+	</div>
+</footer>
 </body>
 </html>

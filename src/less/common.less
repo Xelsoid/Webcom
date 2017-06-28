@@ -29,6 +29,11 @@
   @media (min-width: 0px) and (max-width:459px) { @rules(); }
 }
 
+@mobile-area: 320px;
+.mobile-range(@rules) {
+  @media (min-width: 0px) and (max-width:767px) { @rules(); }
+}
+
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
 
 @darkNavy: #28363d;
@@ -42,20 +47,6 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
-}
-
-header {
-	height:42px;
-	background-color: cyan;
-	position: relative;
-
-	// div {
-	// 	position: fixed;
-	// 	background-color: @darkNavy;
-	// 	height:120px;
-	// 	width:100%;
-	// 	z-index: 1;
-	// }
 }
 
 // common CSS
@@ -73,6 +64,7 @@ header {
 
 //common MAIN!
 main{
+	padding-top: 42px;
 	padding-bottom: 42px;
 }
 
@@ -96,6 +88,8 @@ main{
 	}
 }
 
+@import './modals/modals.less';
+@import './header/header.less';
 @import './main/carousel.less';
 @import './main/portfolio.less';
 @import './main/advantages.less';

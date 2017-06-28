@@ -1,0 +1,271 @@
+.navbar {
+	position: fixed;
+	width:100%;
+	background-color: @darkNavy;
+	z-index: 999;
+	border: none;
+	margin:0px;
+	min-height: auto;
+}
+
+.navbar-wrapper {
+	max-width: 1400px;
+	margin: auto;
+}
+
+.navbar-header {
+	
+	.navbar-brand {
+		height:120px;
+		padding:0px;
+		margin-top:0px;
+
+		&::before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+		}
+
+		.tablet({
+			height: 100px;
+		});
+		.mobile-lg({
+			height: 80px;
+		});
+
+		.mobile-range({
+			height: 50px;
+			margin-left: 16px;
+		});
+
+		img {
+			display: inline-block;
+			margin:0px;
+			vertical-align: middle;
+			
+			.mobile-lg({
+				max-width: 100px;
+			});
+			.mobile-range({
+				max-width: 100px;
+			});
+		}
+	}
+
+	.navbar-toggle {
+		margin:8px 16px;
+		background-color: @darkOrange;
+		border-color: @darkOrange;
+
+		&:hover, &:active, &:focus {
+			background-color: @darkOrange;
+			transform: scale(1.05);
+		}
+
+		&:visited {
+			background-color: @darkOrange;
+		}
+
+		.icon-bar{
+			background-color: @darkNavy;
+		}
+	}
+}
+
+.navbar-collapse {
+	padding: 0;
+}
+
+.navbar-nav {
+	margin-left: 58px;
+	height: 120px;
+
+	.desktop({margin-left: 0px;});
+	.tablet({
+		margin-left: 0px;
+		height: 100px;
+	});
+	.mobile-lg({
+		margin-left: 0px;
+		height: 80px;
+	});
+
+	.mobile-range({
+		margin: 0px;
+		height: 100%;
+	});
+
+	li.menu-item{
+		margin: 0 8px;
+		height: 100%;
+
+		.desktop({margin: 0;});
+		.tablet({margin: 0;});
+		.mobile-lg({margin: 0 4px;});
+
+		.mobile-range({
+			margin: 0px;
+			height: 40px;
+		});
+
+		&:last-child {
+			margin-right: 0;
+		}
+				
+		a{
+			display: block;
+			border-bottom: solid @darkNavy 4px;
+			font-size: 14.5px;
+			letter-spacing: 0.5px;
+			box-sizing: border-box;
+			height: 100%;
+			width: 140px;
+			color: #fff;
+			padding: 0px;
+			vertical-align: middle;
+			text-decoration: none;
+
+			.tablet({
+				width:auto;
+				padding: 0 8px;
+			});
+
+			.mobile-lg({
+				width:auto;
+				padding: 0px;
+				font-size: 12px;
+			});
+
+			.mobile-range({
+				width: 100%;
+				text-align: center;
+			});
+
+			&:hover {
+				border-bottom: solid @darkOrange 4px;
+				color: #fff;
+			}
+
+			&:focus, :active  {
+				background-color: #1e292f;
+				color: #6b848c;
+			}
+
+			&::before {
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				height: 100%;
+			}
+
+			div{
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+}
+
+.aside-info.resized, .navbar-brand.resized, .navbar-nav.resized{
+	.desktop-lg({
+		height: 80px!important;
+	});
+	.desktop({
+		height: 60px!important;
+	});
+	.tablet({
+		height: 60px!important;
+	});
+	.mobile-lg({
+		height: 40px!important;
+	});
+}
+
+.header-address.resized{
+	display: none!important;
+}
+
+.aside-info {
+	height:120px;
+
+	.tablet({height:100px;});	
+
+	.mobile-lg({height:80px;});	
+
+	&::before {
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%;
+	}
+
+	.header-address{
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.mobile-range({display: none;});
+
+	a{
+		color: @darkOrange;
+		font-size: 24px;
+		line-height: 44px;
+		font-weight: bold;
+		text-decoration: none;
+		
+		.desktop({
+			font-size: 18px;
+			line-height: 18px;
+		});
+		.tablet({
+			font-size: 16px;
+			line-height: 18px;
+		});	
+		.mobile-lg({
+			font-size: 12px;
+			line-height: 12px;
+		});	
+	}
+}
+
+.make-order{
+	display: none;
+
+	button {
+		display: inline-block;
+		vertical-align: middle;
+		height: 40px;
+		width: 200px;
+		background-color: transparent;
+		border:solid @darkOrange 2px;
+		border-radius: 10px;
+		font-size: 16px;
+		color: @darkOrange;
+		outline: none;
+
+		.desktop({
+			width: 170px
+		});
+
+		.tablet({
+			font-size: 14px;
+			width: 150px
+		});
+
+		.mobile-lg({
+			font-size: 12px;
+			width: 130px;
+			height: 30px;
+		});
+
+		&:hover, &:focus, &:active {
+			background-color: @darkOrange;
+			color: @darkNavy;
+		}
+	}
+}
+
+.make-order.resized{
+	display: inline-block!important;
+}

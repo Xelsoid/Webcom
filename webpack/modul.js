@@ -1,18 +1,26 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
+// var webpack = require("webpack");
 module.exports = function(paths) {
 	return {
 		module: {
-			rules: [
-				{
-					test:/\.scss$/,
-					include: paths,
-					use: ExtractTextPlugin.extract({
-						publicPath: '../',
-						fallback: 'style-loader',
-						use: ['css-loader', 'sass-loader'],
-					}),
+			loaders: [
+				{ 
+					test: /\.js$/, 
+					exclude: /node_modules/, 
+					loaders: ["babel-loader"], 
 				},
+				{
+					test: /\.(jpg|png|svg|gif)$/,
+					loader: 'file-loader',
+					exclude: /fonts/,
+					options: {
+						name: 'images/[name].[ext]'
+					}
+				},
+				{
+		            test: /\.less$/,
+		            loader:'css-hot-loader',
+		        },
 				{
 		            test: /\.less$/,
 		            use: ExtractTextPlugin.extract({
@@ -23,7 +31,6 @@ module.exports = function(paths) {
 		        },
 			    {
 					test:/\.css$/,
-					include: paths,
 					use: ExtractTextPlugin.extract({
 						publicPath: '../',
 						fallback: 'style-loader',
@@ -33,6 +40,7 @@ module.exports = function(paths) {
 				{
 					test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
 					loader: 'file-loader',
+					exclude: /images/,
 					options: {
 						name: 'fonts/[name].[ext]'
 					}
@@ -40,6 +48,7 @@ module.exports = function(paths) {
 				{
 					test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
 					loader: 'file-loader',
+					exclude: /images/,
 					options: {
 						name: 'fonts/[name].[ext]'
 					}
@@ -51,10 +60,10 @@ module.exports = function(paths) {
 						name: '[name].[ext]'
 					}
 				},
-			]
+			],
 		},
 		plugins: [
 			new ExtractTextPlugin('./css/[name].css'),
-		]
+		],
 	};
 };

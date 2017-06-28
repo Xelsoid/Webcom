@@ -3,20 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const devserver = require('./webpack/devserver');
-const less = require('./webpack/less');
-const sass = require('./webpack/sass');
-const css = require('./webpack/css');
-const extractCSS = require('./webpack/css.extract');
-const images = require('./webpack/images');
-const babel = require('./webpack/babel');
-const uglifyJS = require('./webpack/uglifyJS');
-const noerrorsplug = require('./webpack/noerrorsplugin');
-const html = require('./webpack/html');
-
-// const PATHS = {
-// 	app: path.join(__dirname, '/app'),
-// 	build: path.join(__dirname, '/public'),
-// }
+const modul = require('./webpack/modul');
 
 const common = merge([
 	{
@@ -31,43 +18,28 @@ const common = merge([
 		plugins: [
 	    	new HtmlWebpackPlugin({
 	    		filename: 'index.html',
-	    		// favicon:'src/images/srch.jpg',
 	    		template: path.join(__dirname, 'src/index.html')
 	    	}),
 	    	new webpack.ProvidePlugin({
 				$: "jquery",
 				jQuery: "jquery"
 			}),
-	    	// new webpack.optimize.CommonsChunkPlugin({
-	    	// 	name: 'common',
-	    	// 	minChunks: 2
-	    	// })
 	    ],
 	}
 ]);
-
 
 module.exports = function(env) {
 	if (env === 'production'){
 		return merge([
 			common,
-			babel(),
-			// extractCSS(),
-			// images(),
-			// html(),
-			// uglifyJS(),
-			// noerrorsplug(),
+			modul(),
 		]);
 	}
 	if (env === 'development'){
 		return merge([
 			common,
-			babel(),
+			modul(),
 			devserver(),
-			// less(),
-			// css(),
-			// html(),
-			// images(),
 		]);
 	}
 };

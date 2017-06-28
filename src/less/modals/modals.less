@@ -1,0 +1,96 @@
+.modal-dialog {
+	margin-top: 100px;
+}
+
+.modal-content {
+	.row {
+		max-width: 980px;
+		margin: auto;
+	}
+
+	.modal-header {
+		background-color: @darkOrange;
+		border-radius: 5px;
+		font-size: 24px;
+
+		button {
+			font-size: 36px;
+			color: black;
+		}
+	}
+
+	.form-group {
+		margin-bottom: 24px;
+		
+		label {
+			font-size: 24px;
+			line-height: 24px;
+			font-weight: bold;
+			color: @darkNavy;
+			margin-bottom: 12px;
+		}
+
+		input {
+			border: none;
+			box-shadow: none;
+			font-size: 18px;
+			padding: 0px;
+			color: @darkNavy;
+			border-bottom: solid #e7e7e7 1px;
+			height: 20px;
+
+			&::placeholder {
+				font-size: 18px;
+				line-height: 24px;
+				color: #c0c0c0;
+				font-style: italic;
+			}
+		}
+		
+	}
+	
+	input[type="submit"] {
+		box-sizing: border-box;
+		width: 40%;
+		height: 40px;
+		background-color: @darkOrange;
+		border-radius: 10px;
+		color: #fff;
+		font-size: 18px;
+		line-height: 20px;
+		letter-spacing: 1.5px;
+
+		&:hover, :focus {
+			background-color: @darkOrange;
+			outline: 0;
+			filter: brightness(0.8);
+			transform: scale(1.05);
+		}
+	}
+
+	.modal-body {
+		font-size: 20px;
+	}
+
+	.modal-footer {
+
+		button {
+			box-sizing: border-box;
+			width: 40%;
+			height: 40px;
+			background-color: @darkOrange;
+			border-radius: 10px;
+			color: #fff;
+			font-size: 18px;
+			line-height: 20px;
+			letter-spacing: 1.5px;
+
+			&:hover, :focus {
+				background-color: @darkOrange;
+				outline: 0;
+				filter: brightness(0.8);
+				transform: scale(1.05);
+			}
+		}
+	}
+}

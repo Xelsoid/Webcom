@@ -1,8 +1,8 @@
-npm -i 
+-npm -i 
 
 for development:
-npm run start
+-npm run start
 
 for production:
-npm run build
-npm run serv-http
+-npm run build
+-npm run serv-http
